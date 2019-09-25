@@ -84,13 +84,13 @@ char	**ft_split(char *str)
 	arr[i] = NULL;
 	return (arr);
 }
-
+// 
 // #include <stdio.h>
-
+//
 // int		main(int ac, char **av)
 // {
 // 	char **arr;
-
+//
 // 	char *phrase = "   Hello,   Flavio\t Wuensche!  ";
 // 	arr = ft_split(phrase);
 // 	printf("%s\n", arr[0]);

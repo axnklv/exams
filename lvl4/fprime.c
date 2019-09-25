@@ -51,7 +51,7 @@ void fprime(unsigned int n)
 				printf("%d", prime);
 				n = n / prime;
 				if (n > 1)
-					printf("%s", "*");
+					printf("*");
 				prime--;
 			}
 			prime++;

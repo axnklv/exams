@@ -61,7 +61,6 @@ void	rostring(char *s)
 			}
 		}
 	}
-
 	// write first word
 	i = 0;
 	while (is_space(s[i]))

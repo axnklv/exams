@@ -38,3 +38,41 @@
 // 	int     data;
 // 	t_list  *next;
 // };
+
+#include "list.h"
+
+void	swap(int *a, int *b)
+{
+	int	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+int		ascending(int a, int b)
+{
+		return (a <= b);
+}
+
+t_list		*sort_list(t_list* lst, int (*cmp)(int, int))
+{
+	t_list	*begin;
+	t_list	*p;
+
+	begin = lst;
+	while (lst)
+	{
+		p = lst->next;
+		while (p)
+		{
+			if (!(*cmp)(lst->data, p->data))
+			{
+				swap(&lst->data, &p->data);
+			}
+			p = p->next;
+		}
+		lst = lst->next;
+	}
+	return (begin);
+}
